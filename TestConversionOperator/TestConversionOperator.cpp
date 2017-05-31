@@ -13,9 +13,9 @@ public:
 	{
 
 	}
-	operator RunnablePtr() {
-		return RunnablePtr(this);
-	}
+	//operator RunnablePtr() {
+	//	return RunnablePtr(this);
+	//}
 	int Run() {
 		do
 		{
@@ -32,7 +32,7 @@ public:
 int main()
 {
 	std::shared_ptr<ThreadedDo> sptrTDo = std::make_shared<ThreadedDo>();
-	ThreadPtr sptrThread = std::make_shared<Thread>((RunnablePtr)sptrTDo);
+	ThreadPtr sptrThread = std::make_shared<Thread>(sptrTDo);
 	sptrThread->Start();
 	printf("Press any key to end threaded do");
 	_getch();

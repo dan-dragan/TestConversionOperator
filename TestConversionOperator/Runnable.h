@@ -8,7 +8,7 @@ public:
 	Runnable(Runnable&&);
 	Runnable();
 	virtual ~Runnable();
-	virtual operator RunnablePtr() = 0;
+
 	virtual int Run() = 0;
 };
 

@@ -8,14 +8,14 @@ public:
 	Thread(const Thread& other);
 	Thread(Thread&& other) noexcept;
 	Thread();
-	Thread(RunnablePtr&target);
+	Thread(RunnablePtr target);
 	Thread& operator=(const Thread& other);
 public:
 	virtual ~Thread();
 	int Start();
-	operator RunnablePtr() {
-		return RunnablePtr(this);
-	}
+	//operator RunnablePtr() {
+	//	return RunnablePtr(this);
+	//}
 	void Suspend();
 	bool Resume();
 	void Terminate(DWORD exitCode = 1);

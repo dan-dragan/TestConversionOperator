@@ -69,7 +69,7 @@ Thread::~Thread()
 {
 }
 
-Thread::Thread(RunnablePtr&target): m_running(false)
+Thread::Thread(RunnablePtr target): m_running(false)
 {
 	m_sptrTarget = target;
 }
